@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="#">🌐 Acesse nosso site</a>
+  <a href="https://sites.google.com/cesar.school/arca/home?authuser=0">🌐 Acesse nosso site</a>
 </p>
 
 ---
