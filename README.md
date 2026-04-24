@@ -1,7 +1,14 @@
 <h1 align="center">🕊️ ARCA Gênesis </h1>
 
 <p align="center">
-  <em>Uma breve descrição do que o projeto</em>
+  O WebApp Genesis é uma plataforma web desenvolvida para estudantes de medicina em fase de conclusão do curso que visam residência em pediatria, ou que já atuam nessa especialidade. Criado como projeto acadêmico, centraliza ferramentas essenciais de apoio clínico em um ambiente digital integrado.
+
+- 📚 Protocolos e Fluxogramas Clínicos: acesso rápido a uma biblioteca de fluxogramas e condutas atualizadas para as principais situações pediátricas, com busca por nome ou condição clínica, favoritos e histórico de acesso frequente.
+- 🚨 Modo de Emergência
+Acionado com um único toque, guia o médico passo a passo pelo protocolo adequado em situações críticas, com acesso direto à calculadora de doses sem sair do fluxo de atendimento.
+- 💊 Calculadora de Doses: cálculo automático e preciso de medicações com base no peso do paciente, com sugestão de drogas análogas caso o medicamento principal não esteja disponível.
+
+Desenvolvido com ênfase em agilidade, intuitividade e usabilidade, o Genesis atende profissionais na linha de frente do atendimento pediátrico, fornecendo informações confiáveis de forma imediata.
 </p>
 
 <p align="center">
@@ -63,6 +70,6 @@ Cada sprint tem duração de **2 semanas**. As histórias épicas são desenvolv
 ---
 ## 👥 Equipe do Projeto
 
-| [<img src="https://github.com/perriniadrielly-http.png" width=115><br><sub>Adrielly Perrini</sub>](https://github.com/perriniadrielly-http) | [<img src="https://github.com/beatrizloyola.png" width=115><br><sub>Beatriz Loyola</sub>](https://github.com/beatrizloyola) | [<img src="https://github.com/usuario3.png" width=115><br><sub>Celina Cavalcanti</sub>](https://github.com/usuario3) | [<img src="https://github.com/DanDdC.png" width=115><br><sub>Daniel Donnaire</sub>](https://github.com/DanDdC) | [<img src="https://github.com/juliatenoriocalado.png" width=115><br><sub>Julia Calado</sub>](https://github.com/juliatenoriocalado) |
+| [<img src="https://github.com/perriniadrielly-http.png" width=115><br><sub>Adrielly Perrini</sub>](https://github.com/perriniadrielly-http) | [<img src="https://github.com/beatrizloyola.png" width=115><br><sub>Beatriz Loyola</sub>](https://github.com/beatrizloyola) | [<img src="https://github.com/celinaacav-png.png" width=115><br><sub>Celina Cavalcanti</sub>](https://github.com/celinaacav-png) | [<img src="https://github.com/DanDdC.png" width=115><br><sub>Daniel Donnaire</sub>](https://github.com/DanDdC) | [<img src="https://github.com/juliatenoriocalado.png" width=115><br><sub>Julia Calado</sub>](https://github.com/juliatenoriocalado) |
 | :---: | :---: | :---: | :---: | :---: |
-| [<img src="https://github.com/kev-karan.png" width=115><br><sub>Kelwin Karan</sub>](https://github.com/kev-karan) | [<img src="https://github.com/Luiza029.png" width=115><br><sub>Luiza Costa</sub>](https://github.com/Luiza029) | [<img src="https://github.com/pedrovcb.png" width=115><br><sub>Pedro Bedor</sub>](https://github.com/pedrovcb) | [<img src="https://github.com/usuario9.png" width=115><br><sub>Rafael Carrilho</sub>](https://github.com/usuario9) | [<img src="https://github.com/vitoriaduran.png" width=115><br><sub>Vtóriai Gabrielle</sub>](https://github.com/vitoriaduran) |
+| [<img src="https://github.com/kev-karan.png" width=115><br><sub>Kelwin Karan</sub>](https://github.com/kev-karan) | [<img src="https://github.com/Luiza029.png" width=115><br><sub>Luiza Costa</sub>](https://github.com/Luiza029) | [<img src="https://github.com/pedrovcb.png" width=115><br><sub>Pedro Bedor</sub>](https://github.com/pedrovcb) | [<img src="https://github.com/RafaCarrilho.png" width=115><br><sub>Rafael Carrilho</sub>](https://github.com/RafaCarrilho) | [<img src="https://github.com/vitoriaduran.png" width=115><br><sub>Vtóriai Gabrielle</sub>](https://github.com/vitoriaduran) |
