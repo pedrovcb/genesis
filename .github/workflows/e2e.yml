@@ -1,0 +1,67 @@
+name: E2E Tests
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Create .env file
+        run: |
+          cat > .env << EOF
+          DEBUG=True
+          SECRET_KEY=test-secret-key-ci
+          DATABASE_URL=postgresql://genesis:genesis@postgres:5432/genesis
+          ALLOWED_HOSTS=localhost,127.0.0.1
+          FRONTEND_URL=http://localhost:3000
+          E2E_BASE_URL=http://localhost:3000
+          E2E_API_URL=http://localhost:8000/api
+          E2E_TEST_EMAIL=teste_e2e@genesis.com
+          E2E_TEST_PASSWORD=senha_teste_123
+          EOF
+
+      - name: Build Docker images
+        run: docker compose build
+
+      - name: Build E2E image
+        run: docker build -t genesis-e2e e2e/
+
+      - name: Start services
+        run: docker compose up -d
+
+      - name: Wait for services
+        run: |
+          timeout 60 bash -c 'until curl -f http://localhost:3000 2>/dev/null; do sleep 1; done'
+          timeout 60 bash -c 'until curl -f http://localhost:8000/api/ 2>/dev/null; do sleep 1; done'
+
+      - name: Run E2E tests
+        run: |
+          docker run --rm --network host \
+            -v ${{ github.workspace }}/e2e:/app \
+            -e E2E_BASE_URL=http://localhost:3000 \
+            -e E2E_API_URL=http://localhost:8000/api \
+            -e E2E_TEST_EMAIL=teste_e2e@genesis.com \
+            -e E2E_TEST_PASSWORD=senha_teste_123 \
+            genesis-e2e pytest tests/ -v --html=report.html --self-contained-html
+
+      - name: Upload test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-report
+          path: e2e/report.html
+          retention-days: 30
+
+      - name: Stop services
+        if: always()
+        run: docker compose down

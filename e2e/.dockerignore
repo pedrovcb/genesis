@@ -1,0 +1,9 @@
+__pycache__
+*.pyc
+.pytest_cache
+venv
+.env
+report.html
+.git
+.gitignore
+README.md

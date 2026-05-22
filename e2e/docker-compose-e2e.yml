@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  frontend:
+    image: genesis-frontend
+    ports:
+      - "3000:80"
+    environment:
+      - VITE_API_URL=http://backend:8000/api
+
+  backend:
+    image: genesis-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://neondb_owner:npg_gqGF30vImJlt@ep-super-mud-aciwb9ab-pooler.sa-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+
+  e2e:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - frontend
+      - backend
+    environment:
+      - E2E_BASE_URL=http://frontend:3000
+      - E2E_API_URL=http://backend:8000/api
+      - E2E_TEST_EMAIL=teste_e2e@genesis.com
+      - E2E_TEST_PASSWORD=senha_teste_123
+    networks:
+      - default

@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'fluxogramas',
     'acessos',
     'favoritos',
+    'casos',
 ]
 
 MIDDLEWARE = [
