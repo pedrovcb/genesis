@@ -1,0 +1,95 @@
+[
+  {
+    "model": "casos.casoclinico",
+    "pk": 1,
+    "fields": {
+      "titulo": "Caso Clínico - Sedação",
+      "descricao": "Caso clínico para treino de raciocínio com respostas numéricas e interpretação de dados do paciente.",
+      "contexto": "Paciente masculino, 42 anos, 70 kg, 1,70 m de altura, admitido para procedimento sob sedação. Sem alergias registradas no cenário. Jejum iniciado às 00h, com procedimento previsto para 08h. Frequência cardíaca inicial de 80 bpm e frequência após sedação de 72 bpm.",
+      "fluxograma": null,
+      "nivel": "medio",
+      "ativo": true,
+      "criado_em": "2026-05-22T17:57:00Z",
+      "atualizado_em": "2026-05-22T17:57:00Z"
+    }
+  },
+  {
+    "model": "casos.questao",
+    "pk": 1,
+    "fields": {
+      "caso_clinico": 1,
+      "enunciado": "Calcule o IMC do paciente considerando peso de 70 kg e altura de 1,70 m.",
+      "tipo": "aberta",
+      "ordem": 1,
+      "resposta_esperada": "24.2",
+      "palavras_chave": ["imc", "peso", "altura"],
+      "criado_em": "2026-05-22T17:57:00Z"
+    }
+  },
+  {
+    "model": "casos.questao",
+    "pk": 2,
+    "fields": {
+      "caso_clinico": 1,
+      "enunciado": "Considerando que o jejum iniciou às 00h e o procedimento será às 08h, quantas horas de jejum o paciente terá?",
+      "tipo": "aberta",
+      "ordem": 2,
+      "resposta_esperada": "8",
+      "palavras_chave": ["jejum", "tempo", "horas"],
+      "criado_em": "2026-05-22T17:57:00Z"
+    }
+  },
+  {
+    "model": "casos.questao",
+    "pk": 3,
+    "fields": {
+      "caso_clinico": 1,
+      "enunciado": "Se a frequência cardíaca inicial era 80 bpm e após sedação ficou em 72 bpm, qual foi a redução em bpm?",
+      "tipo": "aberta",
+      "ordem": 3,
+      "resposta_esperada": "8",
+      "palavras_chave": ["frequencia cardiaca", "bpm", "reducao"],
+      "criado_em": "2026-05-22T17:57:00Z"
+    }
+  },
+  {
+    "model": "casos.passoraciocinio",
+    "pk": 1,
+    "fields": {
+      "questao": 1,
+      "titulo": "Identificar peso e altura",
+      "descricao": "Para calcular o IMC, localizar no contexto do caso o peso do paciente e sua altura.",
+      "ordem": 1
+    }
+  },
+  {
+    "model": "casos.passoraciocinio",
+    "pk": 2,
+    "fields": {
+      "questao": 1,
+      "titulo": "Aplicar a fórmula do IMC",
+      "descricao": "Usar a fórmula IMC = peso / altura². Neste caso: 70 / 1,70², resultando aproximadamente em 24,2.",
+      "ordem": 2
+    }
+  },
+  {
+    "model": "casos.passoraciocinio",
+    "pk": 3,
+    "fields": {
+      "questao": 2,
+      "titulo": "Comparar horário inicial e final",
+      "descricao": "O jejum começou às 00h e o procedimento está previsto para 08h, totalizando 8 horas.",
+      "ordem": 1
+    }
+  },
+  {
+    "model": "casos.passoraciocinio",
+    "pk": 4,
+    "fields": {
+      "questao": 3,
+      "titulo": "Calcular a diferença entre os valores",
+      "descricao": "Subtrair a frequência após sedação da frequência inicial: 80 - 72 = 8 bpm.",
+      "ordem": 1
+    }
+  }
+]
