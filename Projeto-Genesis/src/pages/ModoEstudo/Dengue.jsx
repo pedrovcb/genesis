@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './DengueCSS.css';
+import './ModoEstudo.css';
 
 import homeIcon from '../../assets/HomeIconNav.png';
 import calcIcon from '../../assets/CalculadoraIconNav.png';

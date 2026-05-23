@@ -1,4 +1,4 @@
-import "../pages/ModoEstudo/DengueCSS.css";
+import "../pages/ModoEstudo/ModoEstudo.css";
 import HomeIconNav from '../assets/HomeIconNav.png'
 import CalculadoraIconNav from '../assets/CalculadoraIconNav.png'
 import EstudoIconNav from '../assets/EstudoIconNav.png'
