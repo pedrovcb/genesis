@@ -8,6 +8,7 @@ import Cadastro from './pages/Cadastro'
 import ModoEmergencia from './pages/ModoEmergencia'
 import Protocolo from './pages/Protocolo'
 import CalculadoraDose from './pages/CalculadoraDose/CalculadoraDose'
+import ModoEstudoDengue from './pages/ModoEstudo/Dengue' 
 import './App.css'
 
 const PROTOCOLOS = {
@@ -55,6 +56,7 @@ function AppContent() {
             {tela === 'emergencia' && <ModoEmergencia navegar={navegar} />}
             {(tela === 'dengue' || tela === 'sedacao') && protocoloId && <Protocolo protocoloId={protocoloId} navegar={navegar} />}
             {tela === 'calculadora' && <CalculadoraDose navegar={navegar} />}
+            {tela === 'estudo_dengue' && <ModoEstudoDengue navegar={navegar} />} 
           </>
         )}
       </div>

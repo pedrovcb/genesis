@@ -1,0 +1,396 @@
+.med-page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f4f8;
+  padding: 24px 0;
+}
+
+.med-mobile-frame {
+  width: 390px;
+  min-height: 844px;
+  max-height: 844px;
+  background: #ffffff;
+  border-radius: 40px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 480px) {
+  .med-page-wrapper {
+    padding: 0;
+    background: #ffffff;
+    align-items: flex-start;
+  }
+  .med-mobile-frame {
+    width: 100%;
+    min-height: 100dvh;
+    max-height: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+.med-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px 12px;
+  border-bottom: 1px solid #e8edf3;
+  background: #ffffff;
+  flex-shrink: 0;
+}
+
+.med-back-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1B6FD8;
+  cursor: pointer;
+  padding: 0;
+}
+.med-back-btn:hover { opacity: 0.75; }
+
+.med-step-badge {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1B6FD8;
+  background: #D6E8F8;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.med-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 20px 8px;
+  scrollbar-width: none;
+}
+.med-content::-webkit-scrollbar { display: none; }
+
+.med-step {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 32px;
+}
+
+.med-step--center {
+  align-items: center;
+  text-align: center;
+  padding-top: 32px;
+}
+
+.med-section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a2b4a;
+  margin: 0 0 4px;
+}
+
+.med-question {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a2b4a;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.med-small {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #2c3e5a;
+}
+
+.med-list {
+  padding-left: 18px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #1B6FD8;
+}
+
+.med-feedback {
+  font-size: 12px;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin: 0;
+}
+.med-feedback--error {
+  background: #fef2f2;
+  color: #b91c1c;
+  border-left: 3px solid #ef4444;
+}
+.med-feedback--hint {
+  background: #fefce8;
+  color: #92400e;
+  border-left: 3px solid #f59e0b;
+}
+
+.med-acerto {
+  font-size: 15px;
+  font-weight: 700;
+  color: #16a34a;
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+.med-check {
+  color: #16a34a;
+}
+
+.med-card {
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.med-card--blue {
+  background: #d6e8f8;
+  color: #1a3a6b;
+}
+
+.med-card--outline {
+  background: #ffffff;
+  border: 1.5px solid #d0dce8;
+  color: #2c3e5a;
+}
+
+.med-card--yellow {
+  background: #fef9c3;
+  border-left: 4px solid #f59e0b;
+  color: #78350f;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.med-card--yellow::before {
+  content: 'ℹ';
+  font-size: 16px;
+  color: #f59e0b;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.med-card--green {
+  background: #dcfce7;
+  color: #14532d;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.med-card--center {
+  text-align: center;
+}
+
+.med-btn {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: opacity 0.15s, transform 0.1s;
+  line-height: 1.3;
+}
+.med-btn:active { transform: scale(0.98); }
+.med-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.med-btn--primary {
+  background: #1B6FD8;
+  color: #ffffff;
+  border-color: #1B6FD8;
+}
+.med-btn--primary:hover:not(:disabled) { opacity: 0.88; }
+
+.med-btn--outline {
+  background: #ffffff;
+  color: #1a2b4a;
+  border-color: #c8d8ea;
+}
+.med-btn--outline:hover:not(:disabled) {
+  background: #f0f6ff;
+  border-color: #1B6FD8;
+  color: #1B6FD8;
+}
+
+.med-btn--success {
+  background: #dcfce7;
+  color: #14532d;
+  border-color: #22c55e;
+}
+
+.med-btn--error {
+  background: #fef2f2;
+  color: #991b1b;
+  border-color: #ef4444;
+}
+
+.med-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.med-conclusao-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #16a34a;
+  font-size: 28px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.med-conclusao-titulo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a2b4a;
+  margin: 0;
+}
+.med-conclusao-sub {
+  font-size: 14px;
+  color: #5a7090;
+  margin: 4px 0 0;
+}
+
+/* --- ESPAÇAMENTOS UTILITÁRIOS --- */
+.med-mt-8  { margin-top: 8px !important; }
+.med-mt-16 { margin-top: 16px !important; }
+.med-mt-24 { margin-top: 24px !important; }
+
+
+/* --- BOTTOM NAV NOVA (AZUL) --- */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 20px 20px;
+  background: #2B4D8F;
+  flex-shrink: 0;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: background 0.15s;
+}
+
+.nav-btn img {
+  filter: brightness(0) invert(1);
+  opacity: 0.6;
+  display: block;
+}
+
+.nav-btn.active img {
+  opacity: 1;
+}
+
+/* --- BOTÕES FLUTUANTES (FAB) --- */
+.fab-group {
+  position: absolute;
+  bottom: 80px; 
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fab-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fab-btn:hover {
+  transform: scale(1.05);
+}
+
+.fab-btn img {
+  border-radius: 50%;
+  display: block;
+}
+
+/* --- BOTTOM NAV NOVA (AZUL) --- */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px 0; /* Centraliza verticalmente de forma simétrica */
+  background: #3560A0; /* Ajustado para o tom exato da sua imagem de referência */
+  flex-shrink: 0;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: transform 0.15s; 
+}
+
+.nav-btn img {
+  /* Removido o filter e o opacity. Suas imagens já são brancas! */
+  display: block;
+  opacity: 1;
+}
+
+.nav-btn:hover {
+  transform: scale(1.1); /* Dá um efeito tátil melhor ao passar o mouse */
+}
+
+/* --- BOTÕES FLUTUANTES (FAB) --- */
+.fab-group {
+  position: absolute;
+  bottom: 84px; /* Ajuste fino para não colar ou invadir a barra inferior */
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fab-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Garante que a sombra fique circular mesmo com a imagem dentro */
+}
+
+.fab-btn:hover {
+  transform: scale(1.05);
+}
+
+.fab-btn img {
+  border-radius: 50%;
+  display: block;
+}

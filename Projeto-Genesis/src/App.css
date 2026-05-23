@@ -851,3 +851,88 @@ body {
   margin: 0;
   font-weight: 500;
 }
+
+.step-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+.info-card {
+  padding: 16px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.blue-bg-card {
+  background-color: var(--blue-bg2);
+  color: var(--blue-dark);
+}
+
+.outline-card {
+  border: 1px solid var(--blue-light);
+  background-color: transparent;
+  color: var(--blue-dark);
+}
+
+.yellow-card {
+  background-color: #FFF9D6;
+  border: 1px solid #FDE68A;
+  color: #854D0E;
+}
+
+.green-card {
+  background-color: #D1FAE5;
+  border: 1px solid #34D399;
+  color: #065F46;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  background: var(--blue-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.btn-outline {
+  width: 100%;
+  padding: 14px;
+  background: transparent;
+  color: var(--blue-primary);
+  border: 1px solid var(--blue-primary);
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-success {
+  width: 100%;
+  padding: 14px;
+  background: #D1FAE5;
+  color: #065F46;
+  border: 1px solid #10B981;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.question-text {
+  font-weight: 700;
+  color: var(--blue-deeper);
+  font-size: 15px;
+}
+
+.options-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
